@@ -1,13 +1,18 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
+import ui.ConsolaDemo;
 
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
-  }
+/**
+ * Sistema de Gestión de Órdenes - MVP
+ * Actividad 1 - Conecta Seguros
+ *
+ * Sistema completo de gestión de órdenes de trabajo con:
+ * - Múltiples actores y roles (Despachador, Agente, Administrador)
+ * - Estados parciales y globales
+ * - Temporizador con reglas de negocio
+ * - KPIs y tablero de control
+ * - Historial completo de cambios
+ * - Demo interactiva por consola
+ */
+void main() {
+    ConsolaDemo consola = new ConsolaDemo();
+    consola.iniciar();
 }

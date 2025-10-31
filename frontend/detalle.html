@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalle de Orden - Sistema de Gestión">
+    <title>Detalle de Orden - Sistema de Gestión</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/detalle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">
+                    <span class="icon">🏢</span>
+                    Sistema de Gestión de Órdenes
+                </h1>
+                <nav class="nav" role="navigation">
+                    <a href="index.html" class="nav-link">Dashboard</a>
+                    <button class="btn-icon" aria-label="Configuración">
+                        <span>⚙️</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main" role="main">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html">Dashboard</a>
+                <span>/</span>
+                <span id="breadcrumb-orden">Orden</span>
+            </nav>
+
+            <!-- Loading State -->
+            <div class="loading-state" id="loading-state" aria-live="polite">
+                <div class="spinner"></div>
+                <p>Cargando detalles de la orden...</p>
+            </div>
+
+            <!-- Orden Detail -->
+            <div id="orden-detail-container" style="display: none;">
+                <!-- Orden Header -->
+                <section class="detalle-header" aria-label="Información de la orden">
+                    <div class="detalle-header-top">
+                        <div>
+                            <span class="orden-id-large" id="orden-id">-</span>
+                            <h1 class="orden-titulo" id="orden-titulo">-</h1>
+                        </div>
+                        <div class="detalle-header-actions">
+                            <span class="orden-prioridad" id="orden-prioridad">-</span>
+                            <span class="orden-estado-badge" id="orden-estado">-</span>
+                        </div>
+                    </div>
+
+                    <div class="detalle-header-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Creador:</span>
+                            <span class="meta-value" id="orden-creador">-</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Creada:</span>
+                            <span class="meta-value" id="orden-creada">-</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Actualizada:</span>
+                            <span class="meta-value" id="orden-actualizada">-</span>
+                        </div>
+                    </div>
+
+                    <div class="orden-descripcion" id="orden-descripcion">
+                        -
+                    </div>
+                </section>
+
+                <div class="detalle-grid">
+                    <!-- Asignaciones Section -->
+                    <section class="detalle-section" aria-label="Asignaciones por área">
+                        <h2 class="section-title">
+                            Asignaciones por Área
+                            <span class="section-badge" id="asignaciones-count">0</span>
+                        </h2>
+
+                        <div id="asignaciones-container" class="asignaciones-list">
+                            <!-- Asignaciones will be inserted here -->
+                        </div>
+                    </section>
+
+                    <!-- Historial Section -->
+                    <section class="detalle-section" aria-label="Historial de cambios">
+                        <h2 class="section-title">
+                            Historial de Cambios
+                            <button class="btn-text" id="btn-refresh-historial" aria-label="Actualizar historial">
+                                🔄 Actualizar
+                            </button>
+                        </h2>
+
+                        <div id="historial-container" class="historial-list">
+                            <!-- Historial will be inserted here -->
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de Confirmación -->
+    <div class="modal" id="modal-confirmacion" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-content">
+            <h3 id="modal-title" class="modal-title">Confirmar Acción</h3>
+            <p id="modal-message" class="modal-message">¿Estás seguro de realizar esta acción?</p>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" id="modal-cancel">Cancelar</button>
+                <button class="btn btn-primary" id="modal-confirm">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast" role="status" aria-live="polite">
+        <span id="toast-message">Mensaje</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 Sistema de Gestión de Órdenes. Conecta Seguros.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/detalle.js"></script>
+</body>
+</html>
+

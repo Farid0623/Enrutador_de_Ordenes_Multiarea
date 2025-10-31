@@ -1,10 +1,41 @@
-### IntelliJ IDEA ###
+# ========================================
+# SISTEMA DE GESTIÓN DE ÓRDENES - GITIGNORE
+# ========================================
+
+# ========================================
+# JAVA
+# ========================================
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+# Archivos compilados
+out/
+target/
+build/
+bin/
+dist/
+*.log
+
+# ========================================
+# IDES
+# ========================================
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .kotlin
 
-### Eclipse ###
+# Eclipse
 .apt_generated
 .classpath
 .factorypath
@@ -16,15 +47,184 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 
-### VS Code ###
+# VS Code
 .vscode/
+*.code-workspace
 
-### Mac OS ###
+# ========================================
+# GESTORES DE DEPENDENCIAS
+# ========================================
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# Gradle
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+
+# ========================================
+# BASE DE DATOS
+# ========================================
+
+# H2 Database
+*.db
+*.mv.db
+*.trace.db
+db/data/*.db
+db/data/*.mv.db
+db/data/*.trace.db
+
+# SQLite
+*.sqlite
+*.sqlite3
+
+# PostgreSQL local
+*.sql.backup
+/db/backups/
+
+# MySQL dumps
+*.sql.gz
+
+# ========================================
+# VARIABLES DE ENTORNO Y CONFIGURACIÓN
+# ========================================
+.env
+.env.local
+.env.*.local
+*.env
+!.env.example
+
+# Configuraciones locales
+config/local.*
+application-local.properties
+application-local.yml
+
+# Secrets
+secrets/
+*.key
+*.pem
+*.p12
+*.jks
+
+# ========================================
+# LOGS Y TEMPORALES
+# ========================================
+logs/
+*.log
+*.log.*
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ========================================
+# TESTING
+# ========================================
+coverage/
+.nyc_output/
+*.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# ========================================
+# DOCKER
+# ========================================
+docker/data/
+docker/logs/
+.docker/
+*.dockerignore.local
+
+# ========================================
+# SISTEMA OPERATIVO
+# ========================================
+
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.nfs*
+
+# ========================================
+# DOCUMENTACIÓN GENERADA
+# ========================================
+/docs/javadoc/
+/docs/api/
+*.pdf.backup
+
+# ========================================
+# OTROS
+# ========================================
+
+# Backups
+*.bak
+*.backup
+*.old
+
+# Archivos comprimidos
+*.zip
+*.tar.gz
+*.rar
+!docs/*.zip
+
+# Node modules (si se usa frontend)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Python (si se usan scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+
+# ========================================
+# PROYECTO ESPECÍFICO
+# ========================================
+
+# Datos de demo generados
+/demo-data/
+/test-output/
+
+# Reportes
+/reports/
+/metrics/
+
+# Cache de la aplicación
+.cache/
+*.cache
