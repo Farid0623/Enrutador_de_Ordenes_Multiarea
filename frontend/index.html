@@ -1,0 +1,187 @@
+                        </div>
+                    </div>
+
+                    <div class="kpi-card kpi-nuevas" role="region" aria-label="Órdenes nuevas">
+                        <div class="kpi-icon">🆕</div>
+                        <div class="kpi-content">
+                            <div class="kpi-value" id="kpi-nuevas">-</div>
+                            <div class="kpi-label">Nuevas</div>
+                            <div class="kpi-percentage" id="kpi-nuevas-pct">-</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Filters Section -->
+            <section class="filters-section" aria-label="Filtros de búsqueda">
+                <div class="filters-header">
+                    <h2 class="section-title">Órdenes de Trabajo</h2>
+                    <button class="btn btn-primary" id="btn-nueva-orden" aria-label="Crear nueva orden">
+                        <span>➕</span> Nueva Orden
+                    </button>
+                </div>
+
+                <div class="filters-bar" role="search">
+                    <div class="filter-group">
+                        <label for="filter-estado" class="filter-label">Estado:</label>
+                        <select id="filter-estado" class="filter-select" aria-label="Filtrar por estado">
+                            <option value="">Todos los estados</option>
+                            <option value="NUEVA">Nueva</option>
+                            <option value="EN_PROCESO">En Proceso</option>
+                            <option value="COMPLETADA">Completada</option>
+                            <option value="CERRADA_SIN_SOLUCION">Cerrada sin Solución</option>
+                            <option value="PARCIALMENTE_VENCIDA">Parcialmente Vencida</option>
+                            <option value="TOTALMENTE_VENCIDA">Totalmente Vencida</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-prioridad" class="filter-label">Prioridad:</label>
+                        <select id="filter-prioridad" class="filter-select" aria-label="Filtrar por prioridad">
+                            <option value="">Todas</option>
+                            <option value="CRITICA">Crítica</option>
+                            <option value="ALTA">Alta</option>
+                            <option value="MEDIA">Media</option>
+                            <option value="BAJA">Baja</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-buscar" class="filter-label">Buscar:</label>
+                        <input
+                            type="search"
+                            id="filter-buscar"
+                            class="filter-input"
+                            placeholder="Buscar por título o ID..."
+                            aria-label="Buscar órdenes">
+                    </div>
+
+                    <button class="btn btn-secondary" id="btn-limpiar-filtros" aria-label="Limpiar filtros">
+                        🔄 Limpiar
+                    </button>
+                </div>
+
+                <div class="filters-info" id="filters-info" role="status" aria-live="polite">
+                    Mostrando todas las órdenes
+                </div>
+            </section>
+
+            <!-- Orders List Section -->
+            <section class="orders-section" aria-label="Lista de órdenes">
+                <!-- Loading State -->
+                <div class="loading-state" id="loading-state" aria-live="polite" aria-busy="true">
+                    <div class="spinner"></div>
+                    <p>Cargando órdenes...</p>
+                </div>
+
+                <!-- Empty State -->
+                <div class="empty-state" id="empty-state" style="display: none;" aria-live="polite">
+                    <div class="empty-icon">📋</div>
+                    <h3>No hay órdenes</h3>
+                    <p>No se encontraron órdenes con los filtros aplicados.</p>
+                </div>
+
+                <!-- Orders Grid -->
+                <div class="orders-grid" id="orders-container" style="display: none;">
+                    <!-- Order cards will be inserted here dynamically -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 Sistema de Gestión de Órdenes. Conecta Seguros.</p>
+            <p>Última actualización: <span id="last-update">-</span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de Gestión de Órdenes - Dashboard">
+    <title>Gestión de Órdenes - Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">
+                    <span class="icon">🏢</span>
+                    Sistema de Gestión de Órdenes
+                </h1>
+                <nav class="nav" role="navigation">
+                    <a href="index.html" class="nav-link active" aria-current="page">Dashboard</a>
+                    <a href="#" class="nav-link">Áreas</a>
+                    <a href="#" class="nav-link">Reportes</a>
+                    <button class="btn-icon" aria-label="Configuración">
+                        <span>⚙️</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main" role="main">
+        <div class="container">
+            <!-- KPIs Section -->
+            <section class="kpis-section" aria-label="Indicadores clave de rendimiento">
+                <h2 class="section-title">Indicadores Clave</h2>
+                <div class="kpis-grid" id="kpis-container">
+                    <!-- KPI Cards will be inserted here -->
+                    <div class="kpi-card kpi-total" role="region" aria-label="Total de órdenes">
+                        <div class="kpi-icon">📊</div>
+                        <div class="kpi-content">
+                            <div class="kpi-value" id="kpi-total">-</div>
+                            <div class="kpi-label">Total Órdenes</div>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card kpi-completadas" role="region" aria-label="Órdenes completadas">
+                        <div class="kpi-icon">✅</div>
+                        <div class="kpi-content">
+                            <div class="kpi-value" id="kpi-completadas">-</div>
+                            <div class="kpi-label">Completadas</div>
+                            <div class="kpi-percentage" id="kpi-completadas-pct">-</div>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card kpi-proceso" role="region" aria-label="Órdenes en proceso">
+                        <div class="kpi-icon">🔄</div>
+                        <div class="kpi-content">
+                            <div class="kpi-value" id="kpi-proceso">-</div>
+                            <div class="kpi-label">En Proceso</div>
+                            <div class="kpi-percentage" id="kpi-proceso-pct">-</div>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card kpi-sin-solucion" role="region" aria-label="Órdenes cerradas sin solución">
+                        <div class="kpi-icon">❌</div>
+                        <div class="kpi-content">
+                            <div class="kpi-value" id="kpi-sin-solucion">-</div>
+                            <div class="kpi-label">Sin Solución</div>
+                            <div class="kpi-percentage" id="kpi-sin-solucion-pct">-</div>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card kpi-vencidas" role="region" aria-label="Órdenes vencidas">
+                        <div class="kpi-icon">⚠️</div>
+                        <div class="kpi-content">
+                            <div class="kpi-value" id="kpi-vencidas">-</div>
+                            <div class="kpi-label">Vencidas</div>
+                            <div class="kpi-percentage" id="kpi-vencidas-pct">-</div>
+
