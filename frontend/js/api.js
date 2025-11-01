@@ -21,8 +21,8 @@
         const ordenes = [
             {
                 id: 'ORD-00001',
-                titulo: 'Instalación sistema CCTV - Cliente VIP Banco Central',
-                descripcion: 'Instalación completa de 24 cámaras IP 4K',
+                titulo: 'Instalación de sistema CCTV - Cliente VIP Banco Central',
+                descripcion: 'Instalación completa de 24 cámaras IP 4K con almacenamiento NVR',
                 estado_global: 'NUEVA',
                 prioridad: 'CRITICA',
                 num_areas: 1,
@@ -31,8 +31,8 @@
             },
             {
                 id: 'ORD-00002',
-                titulo: 'Renovación contrato mantenimiento - Corp. Tech Solutions',
-                descripcion: 'Renovación anual de contrato',
+                titulo: 'Renovación de contrato de mantenimiento - Corp. Tech Solutions',
+                descripcion: 'Renovación anual del contrato de mantenimiento preventivo',
                 estado_global: 'EN_PROCESO',
                 prioridad: 'ALTA',
                 num_areas: 3,
@@ -41,8 +41,8 @@
             },
             {
                 id: 'ORD-00003',
-                titulo: 'Soporte urgente - Fallo sistema alarmas Hotel Plaza',
-                descripcion: 'Sistema de alarmas perimetrales dejó de funcionar',
+                titulo: 'Soporte urgente - Fallo en sistema de alarmas Hotel Plaza',
+                descripcion: 'El sistema de alarmas perimetrales ha dejado de funcionar',
                 estado_global: 'PARCIALMENTE_VENCIDA',
                 prioridad: 'CRITICA',
                 num_areas: 1,
@@ -51,8 +51,8 @@
             },
             {
                 id: 'ORD-00004',
-                titulo: 'Ampliación sistema control accesos - Centro Comercial Norte',
-                descripcion: 'Añadir 8 nuevas puertas al sistema existente',
+                titulo: 'Ampliación de sistema de control de accesos - Centro Comercial Norte',
+                descripcion: 'Añadir 8 nuevas puertas al sistema de control de accesos existente',
                 estado_global: 'EN_PROCESO',
                 prioridad: 'MEDIA',
                 num_areas: 2,
@@ -61,8 +61,8 @@
             },
             {
                 id: 'ORD-00005',
-                titulo: 'Proyecto integral edificio corporativo - Nueva sede Global Insurance',
-                descripcion: 'Proyecto completo de seguridad para edificio de 12 plantas',
+                titulo: 'Proyecto integral para edificio corporativo - Nueva sede Global Insurance',
+                descripcion: 'Proyecto completo de seguridad para un edificio de 12 plantas',
                 estado_global: 'EN_PROCESO',
                 prioridad: 'CRITICA',
                 num_areas: 4,
@@ -71,8 +71,8 @@
             },
             {
                 id: 'ORD-00006',
-                titulo: 'Configuración remota VPN - Cliente Farmacia Central',
-                descripcion: 'Cliente requiere acceso remoto VPN',
+                titulo: 'Configuración de VPN remota - Cliente Farmacia Central',
+                descripcion: 'El cliente requiere configuración de acceso remoto VPN seguro',
                 estado_global: 'NUEVA',
                 prioridad: 'MEDIA',
                 num_areas: 1,
@@ -82,7 +82,7 @@
             {
                 id: 'ORD-00007',
                 titulo: 'Mantenimiento preventivo trimestral - Cadena Retail TopMart',
-                descripcion: 'Mantenimiento preventivo programado para 8 tiendas',
+                descripcion: 'Mantenimiento preventivo programado para 8 tiendas de la cadena',
                 estado_global: 'NUEVA',
                 prioridad: 'BAJA',
                 num_areas: 3,
@@ -91,8 +91,8 @@
             },
             {
                 id: 'ORD-00008',
-                titulo: 'Actualización firmware cámaras - Oficinas Legales Asociados',
-                descripcion: 'Actualización de firmware de seguridad',
+                titulo: 'Actualización de firmware de cámaras - Oficinas Legales Asociados',
+                descripcion: 'Actualización de firmware de seguridad para 12 cámaras',
                 estado_global: 'COMPLETADA',
                 prioridad: 'BAJA',
                 num_areas: 1,
@@ -127,8 +127,8 @@
     getMockOrden(id) {
         const orden = {
             id: id,
-            titulo: 'Proyecto integral edificio corporativo',
-            descripcion: 'Proyecto completo de seguridad...',
+            titulo: 'Proyecto integral para edificio corporativo',
+            descripcion: 'Proyecto completo de seguridad que incluye CCTV, control de accesos y sistema de alarmas para las 12 plantas del edificio.',
             estado_global: 'EN_PROCESO',
             prioridad: 'CRITICA',
             creador: 'Carlos Martínez',
@@ -162,21 +162,21 @@
             {
                 id: 1,
                 evento: 'Orden creada',
-                detalle: 'Orden creada con prioridad CRITICA',
+                detalle: 'La orden ha sido creada con prioridad CRÍTICA',
                 timestamp: '2025-10-29T10:00:00Z',
                 actor: 'Carlos Martínez',
             },
             {
                 id: 2,
                 evento: 'Área asignada',
-                detalle: 'Asignada a Área Técnica',
+                detalle: 'Asignada al Área Técnica para su revisión',
                 timestamp: '2025-10-29T10:05:00Z',
                 actor: 'Carlos Martínez',
             },
             {
                 id: 3,
                 evento: 'Estado cambiado',
-                detalle: 'Área Técnica inició trabajo',
+                detalle: 'El Área Técnica ha iniciado el trabajo',
                 timestamp: '2025-10-29T11:00:00Z',
                 actor: 'Ana López',
             },

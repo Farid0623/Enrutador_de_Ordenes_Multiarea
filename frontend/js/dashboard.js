@@ -106,7 +106,7 @@ class Dashboard {
 
         } catch (error) {
             logError('Error cargando datos:', error);
-            this.showError('Error al cargar los datos. Por favor, intenta de nuevo.');
+            this.showError('Error al cargar los datos. Por favor, inténtelo de nuevo.');
         }
     }
 

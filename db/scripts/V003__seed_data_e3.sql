@@ -71,8 +71,8 @@ INSERT INTO areas (id, nombre, responsable, contacto, descripcion, activa) VALUE
 -- Orden 1: Simple (1 área) - Hace 6 días
 INSERT INTO ordenes (id, titulo, descripcion, creador, estado_global, prioridad, creada_en) VALUES
     ('ORD-00001',
-     'Instalación sistema CCTV - Cliente VIP Banco Central',
-     'Instalación completa de 24 cámaras IP 4K con almacenamiento NVR de 30 días. Incluye cableado estructurado Cat6A y configuración de software de gestión centralizada. Cliente solicita máxima discreción.',
+     'Instalación de sistema CCTV - Cliente VIP Banco Central',
+     'Instalación completa de 24 cámaras IP 4K con almacenamiento NVR de 30 días. Incluye cableado estructurado Cat6A y configuración del software de gestión centralizada. El cliente solicita máxima discreción.',
      'Carlos Martínez',
      'NUEVA',
      'CRITICA',
@@ -81,8 +81,8 @@ INSERT INTO ordenes (id, titulo, descripcion, creador, estado_global, prioridad,
 -- Orden 2: Multiárea (3 áreas) - Hace 5 días
 INSERT INTO ordenes (id, titulo, descripcion, creador, estado_global, prioridad, creada_en) VALUES
     ('ORD-00002',
-     'Renovación contrato mantenimiento - Corp. Tech Solutions',
-     'Renovación anual de contrato de mantenimiento preventivo para 15 ubicaciones. Requiere coordinación comercial, técnica y revisión de calidad de instalaciones existentes.',
+     'Renovación de contrato de mantenimiento - Corp. Tech Solutions',
+     'Renovación anual del contrato de mantenimiento preventivo para 15 ubicaciones. Requiere coordinación comercial, técnica y revisión de calidad de las instalaciones existentes.',
      'Pedro Gómez',
      'EN_PROCESO',
      'ALTA',
@@ -91,8 +91,8 @@ INSERT INTO ordenes (id, titulo, descripcion, creador, estado_global, prioridad,
 -- Orden 3: Simple (1 área) - Hace 4 días
 INSERT INTO ordenes (id, titulo, descripcion, creador, estado_global, prioridad, creada_en) VALUES
     ('ORD-00003',
-     'Soporte urgente - Fallo sistema alarmas Hotel Plaza',
-     'Sistema de alarmas perimetrales dejó de funcionar. Cliente reporta falsas alarmas continuas. Requiere atención inmediata para evitar problemas con huéspedes.',
+     'Soporte urgente - Fallo en sistema de alarmas Hotel Plaza',
+     'El sistema de alarmas perimetrales ha dejado de funcionar. El cliente reporta falsas alarmas continuas. Requiere atención inmediata para evitar problemas con los huéspedes.',
      'María Rodríguez',
      'EN_PROCESO',
      'CRITICA',
@@ -101,8 +101,8 @@ INSERT INTO ordenes (id, titulo, descripcion, creador, estado_global, prioridad,
 -- Orden 4: Multiárea (2 áreas) - Hace 3 días
 INSERT INTO ordenes (id, titulo, descripcion, creador, estado_global, prioridad, creada_en) VALUES
     ('ORD-00004',
-     'Ampliación sistema control accesos - Centro Comercial Norte',
-     'Añadir 8 nuevas puertas al sistema existente de control de accesos biométrico. Requiere instalación técnica y auditoría de calidad por normativa vigente.',
+     'Ampliación de sistema de control de accesos - Centro Comercial Norte',
+     'Añadir 8 nuevas puertas al sistema existente de control de accesos biométrico. Requiere instalación técnica y auditoría de calidad según la normativa vigente.',
      'Ana López',
      'EN_PROCESO',
      'MEDIA',
@@ -230,23 +230,23 @@ INSERT INTO historial (orden_id, evento, detalle, estado_global, estado_parcial,
 
 -- Historial ORD-00005 (Proyecto grande)
 INSERT INTO historial (orden_id, evento, detalle, estado_global, timestamp, actor) VALUES
-    ('ORD-00005', 'Orden creada', 'Proyecto integral - múltiples áreas', 'NUEVA', DATEADD('DAY', -2, CURRENT_TIMESTAMP), 'Carlos Martínez'),
-    ('ORD-00005', 'Área asignada', 'Asignadas 4 áreas: Comercial, Logística, Técnica, Calidad', 'EN_PROCESO', DATEADD('DAY', -2, DATEADD('MINUTE', 10, CURRENT_TIMESTAMP)), 'Carlos Martínez');
+    ('ORD-00005', 'Orden creada', 'Proyecto integral creado - Requiere múltiples áreas', 'NUEVA', DATEADD('DAY', -2, CURRENT_TIMESTAMP), 'Carlos Martínez'),
+    ('ORD-00005', 'Área asignada', 'Se han asignado 4 áreas: Comercial, Logística, Técnica y Calidad', 'EN_PROCESO', DATEADD('DAY', -2, DATEADD('MINUTE', 10, CURRENT_TIMESTAMP)), 'Carlos Martínez');
 
 -- Historial ORD-00006
 INSERT INTO historial (orden_id, evento, detalle, estado_global, timestamp, actor) VALUES
-    ('ORD-00006', 'Orden creada', 'Configuración VPN remota', 'NUEVA', DATEADD('DAY', -1, CURRENT_TIMESTAMP), 'Pedro Gómez'),
-    ('ORD-00006', 'Área asignada', 'Asignada a Área Técnica', 'NUEVA', DATEADD('DAY', -1, DATEADD('MINUTE', 3, CURRENT_TIMESTAMP)), 'Pedro Gómez');
+    ('ORD-00006', 'Orden creada', 'Orden de configuración VPN remota creada', 'NUEVA', DATEADD('DAY', -1, CURRENT_TIMESTAMP), 'Pedro Gómez'),
+    ('ORD-00006', 'Área asignada', 'Asignada al Área Técnica', 'NUEVA', DATEADD('DAY', -1, DATEADD('MINUTE', 3, CURRENT_TIMESTAMP)), 'Pedro Gómez');
 
 -- Historial ORD-00007
 INSERT INTO historial (orden_id, evento, detalle, estado_global, timestamp, actor) VALUES
-    ('ORD-00007', 'Orden creada', 'Mantenimiento preventivo trimestral', 'NUEVA', CURRENT_TIMESTAMP, 'Laura Fernández'),
-    ('ORD-00007', 'Área asignada', 'Asignadas áreas: Técnica, Comercial, Calidad', 'NUEVA', DATEADD('MINUTE', 5, CURRENT_TIMESTAMP), 'Laura Fernández');
+    ('ORD-00007', 'Orden creada', 'Orden de mantenimiento preventivo trimestral creada', 'NUEVA', CURRENT_TIMESTAMP, 'Laura Fernández'),
+    ('ORD-00007', 'Área asignada', 'Se han asignado las áreas: Técnica, Comercial y Calidad', 'NUEVA', DATEADD('MINUTE', 5, CURRENT_TIMESTAMP), 'Laura Fernández');
 
 -- Historial ORD-00008
 INSERT INTO historial (orden_id, evento, detalle, estado_global, timestamp, actor) VALUES
-    ('ORD-00008', 'Orden creada', 'Actualización firmware', 'NUEVA', CURRENT_TIMESTAMP, 'Ana López'),
-    ('ORD-00008', 'Área asignada', 'Asignada a Área Técnica - Ana López', 'NUEVA', DATEADD('MINUTE', 2, CURRENT_TIMESTAMP), 'Ana López');
+    ('ORD-00008', 'Orden creada', 'Orden de actualización de firmware creada', 'NUEVA', CURRENT_TIMESTAMP, 'Ana López'),
+    ('ORD-00008', 'Área asignada', 'Asignada al Área Técnica - Responsable: Ana López', 'NUEVA', DATEADD('MINUTE', 2, CURRENT_TIMESTAMP), 'Ana López');
 
 -- ============================================
 -- VERIFICACIÓN DE DATOS INSERTADOS

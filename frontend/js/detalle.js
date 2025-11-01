@@ -308,19 +308,19 @@ class DetalleOrden {
         const messages = {
             iniciar: {
                 title: 'Iniciar Trabajo',
-                message: '¿Confirmar inicio de trabajo en esta área?',
+                message: '¿Desea confirmar el inicio del trabajo en esta área?',
             },
             pausar: {
                 title: 'Pausar Trabajo',
-                message: '¿Confirmar pausa de trabajo en esta área?',
+                message: '¿Desea confirmar la pausa del trabajo en esta área?',
             },
             completar: {
                 title: 'Completar Trabajo',
-                message: '¿Confirmar completado de trabajo en esta área? Esta acción no se puede deshacer.',
+                message: '¿Desea confirmar que el trabajo en esta área ha sido completado? Esta acción no se puede deshacer.',
             },
             cerrar: {
                 title: 'Cerrar sin Solución',
-                message: '¿Confirmar cierre sin solución? Esta acción no se puede deshacer.',
+                message: '¿Desea confirmar el cierre sin solución? Esta acción no se puede deshacer.',
             },
         };
 
